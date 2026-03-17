@@ -16,7 +16,8 @@ def get_db():
         host="mysql.railway.internal",
         user="root",
         password="krATQmTaBmgVryRcpBbuhSSmNpZcaXyq",
-        database="railway"
+        database="railway",
+        port=3306
     )
 
 # ================= TOKEN DECORATOR =================
