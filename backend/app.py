@@ -13,10 +13,10 @@ app.config['SECRET_KEY'] = 'secret123'
 # ================= DB CONNECTION =================
 def get_db():
     return mysql.connector.connect(
-        host="localhost",
+        host="mysql.railway.internal",
         user="root",
-        password="Lmp@1997",
-        database="student_db"
+        password="krATQmTaBmgVryRcpBbuhSSmNpZcaXyq",
+        database="railway"
     )
 
 # ================= TOKEN DECORATOR =================
@@ -207,4 +207,4 @@ def attendance_report():
 
 # ================= RUN =================
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)  
