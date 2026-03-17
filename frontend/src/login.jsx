@@ -6,9 +6,10 @@ export default function Login({ setToken }) {
     username: "",
     password: ""
   });
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const handleLogin = () => {
-    axios.post("http://127.0.0.1:5000/login", form)
+    axios.post(`${API_URL}/login`, form)
       .then(res => {
         localStorage.setItem("token", res.data.token);
         setToken(res.data.token);
